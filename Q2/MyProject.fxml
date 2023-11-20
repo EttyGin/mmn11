@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyProjectController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#btmPressed" prefHeight="41.0" prefWidth="110.0" text="draw shapes">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Canvas fx:id="canv" height="400.0" width="497.0" />
+   </children>
+</HBox>
