@@ -19,16 +19,21 @@ public class MyProjectController {
     void btmPressed(ActionEvent event) {
     	gc.clearRect(0, 0, canv.getWidth(), canv.getHeight());
     	final int SIZE = 10;
+    	final int maxH = (int) (canv.getHeight() / 4);
+    	final int maxW = (int) (canv.getWidth() / 4);    	
     	int x, y, w, h, type;
     	Random r = new Random();
+    	
     	for (int i=0; i<SIZE; i++) {
     		x = r.nextInt(400);
     		y = r.nextInt(400);
-    		w = r.nextInt(200);
-    		h = r.nextInt(200);
+    		w = r.nextInt(maxW);
+    		h = r.nextInt(maxH);
     		type = r.nextInt(3);
     		
     		gc.setFill(Color.color(Math.random(), Math.random(), Math.random()));
+    		
+    		//Randomizes the shape type
     		if (type==1)
     			gc.fillOval(x,y,w,h);
     		else if (type==2)
@@ -36,7 +41,5 @@ public class MyProjectController {
     		else 
 				gc.strokeLine(x,y,w,h);
     	}
-    	
     }
-
 }
